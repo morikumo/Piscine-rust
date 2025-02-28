@@ -2,4 +2,4 @@
 members = [
     "module_00/ex00",
     "module_00/ex01"
-]
+, "module_00/ex02"]

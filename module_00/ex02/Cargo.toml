@@ -1,0 +1,18 @@
+[package]
+name = "ex02"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "yes"
+path = "yes.rs"
+
+[[bin]]
+name = "collatz"
+path = "collatz.rs"
+
+[[bin]]
+name = "print_bytes"
+path = "print_bytes.rs"
