@@ -1,0 +1,28 @@
+[package]
+name = "ex04"
+version = "0.1.0"
+edition = "2021"
+authors = ["Me"]
+description = "Ma réponse au cinquième exercice du premier module de la Piscine Rust de 42"
+publish = false
+
+[dependencies]
+
+# Profils de compilation
+[profile.dev]
+# Profil "dev" par défaut
+
+[profile.no-overflows]
+inherits = "dev"
+opt-level = 2
+debug = true
+overflow-checks = false
+
+# Configuration des binaires
+[[bin]]
+name = "other"
+path = "src/other.rs"
+
+[[bin]]
+name = "test-overflows"
+path = "src/overflow.rs"
