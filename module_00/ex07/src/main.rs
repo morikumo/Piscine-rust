@@ -1,11 +1,10 @@
-fn strpcmp(query: &[u8], pattern: &[u8]) -> bool{
- 
-}
+use ex07::strpcmp;
+use ftkit::ARGS;
 
 #[cfg(test)]
 mod tests {
     use super::*;
-
+    
     #[test]
     fn test_strpcmp() {
         assert!(strpcmp(b"abc", b"abc"));
@@ -20,5 +19,12 @@ mod tests {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let a = strpcmp(&ARGS[1].as_bytes(), &ARGS[2].as_bytes());
+    
+    if a == true {
+        println!("yes")
+    }
+    else {
+        println!("no")  
+    }
 }

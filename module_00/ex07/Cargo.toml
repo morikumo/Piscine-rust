@@ -5,3 +5,11 @@ edition = "2021"
 
 [dependencies]
 ftkit = "0.1.12"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[lib]
+name = "ex07"
+path = "src/lib.rs"
