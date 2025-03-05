@@ -1,5 +1,5 @@
 fn strpcmp(query: &[u8], pattern: &[u8]) -> bool{
- println("hello");   
+ 
 }
 
 #[cfg(test)]
