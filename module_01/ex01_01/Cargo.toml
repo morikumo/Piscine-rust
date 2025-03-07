@@ -1,0 +1,15 @@
+[package]
+name = "ex01_01"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ftkit = "0.1.12"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[lib]
+name = "ex01_01"
+path = "src/lib.rs"
