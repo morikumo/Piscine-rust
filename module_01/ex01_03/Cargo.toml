@@ -1,5 +1,5 @@
 [package]
-name = "ex01_01"
+name = "ex01_03"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,5 +11,5 @@ name = "main"
 path = "src/main.rs"
 
 [lib]
-name = "ex01_01"
+name = "ex01_03"
 path = "src/lib.rs"

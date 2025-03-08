@@ -50,3 +50,42 @@ pub const fn color_name<'a>(color: &'a [u8; 3]) -> &'static str {
         _ => "unknown"
     }
 }
+
+pub fn largest_group<'a>(haystack: &'a [u32], needle: &[u32]) -> &'a [u32] {    
+    if haystack.is_empty() || needle.is_empty() {
+        return &[];
+    }
+    
+    let mut best_start = 0; 
+    let mut best_len = 0;   
+    
+    let mut current_start = None;
+    let mut current_len = 0; 
+    
+    for i in 0..haystack.len() {
+        if needle.contains(&haystack[i]) {
+            if current_start.is_none() {
+                current_start = Some(i);
+            }
+            current_len += 1;
+        } else {
+            if let Some(start) = current_start {
+                if current_len > best_len {
+                    best_start = start;
+                    best_len = current_len;
+                }
+                current_start = None;
+                current_len = 0;
+            }
+        }
+    }
+    
+    if let Some(start) = current_start {
+        if current_len > best_len {
+            best_start = start;
+            best_len = current_len;
+        }
+    }
+    
+    &haystack[best_start..best_start + best_len]
+}

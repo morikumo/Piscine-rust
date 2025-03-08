@@ -50,7 +50,3 @@ pub const fn color_name<'a>(color: &'a [u8; 3]) -> &'static str {
         _ => "unknown"
     }
 }
-
-fn largest_group<'a>(haystack: &'a [u32], needle: &'a [u32]) -> &'a [u32]{
-
-}
